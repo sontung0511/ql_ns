@@ -111,7 +111,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['level']))
         $insert = "INSERT INTO tai_khoan(ho, ten, hinh_anh, email, mat_khau, so_dt, quyen, trang_thai, truy_cap, ngay_sua, ngay_tao) VALUES('$lastName', '$firstName', '$nameImage', '$email', '$password', '$phone', $level, $status, $access, '$date_create', '$date_update')";   
         mysqli_query($conn, $insert);
         $success['success'] = 'Create Account new success.';
-        echo '<script>setTimeout("window.location=\'create_account.php?p=account&a=add-account\'",1000);</script>';
+        echo '<script>setTimeout("window.location=\'tao-tai-khoan.php?p=account&a=add-account\'",1000);</script>';
       }
     }
     $tenNhanVien = $_POST['tenNhanVien'];
@@ -245,10 +245,6 @@ if(isset($_SESSION['username']) && isset($_SESSION['level']))
                     <label>
                       <input type="radio" name="level" class="minimal" value="1" checked>
                       manager
-                    </label>
-                    <label>
-                      <input type="radio" name="level" class="minimal" value="2" >
-                      leader
                     </label>
                     <label>
                       <input type="radio" name="level" class="minimal" value="0">

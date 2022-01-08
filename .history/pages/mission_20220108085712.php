@@ -104,7 +104,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['level']))
             <div class="box-body">
               <?php 
                 // show error
-                if($row_acc['quyen'] != 1  && $row_acc['quyen'] != 2) 
+                if($row_acc['quyen'] != 1) 
                 {
                   echo "<div class='alert alert-warning alert-dismissible'>";
                   echo "<h4><i class='icon fa fa-ban'></i> Notification!</h4>";
@@ -182,7 +182,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['level']))
                     </div>
                     <!-- /.form-group -->
                     <?php 
-                      if($_SESSION['level'] == 1  || $row_acc['quyen'] == 2)
+                      if($_SESSION['level'] == 1)
                         echo "<button type='submit' class='btn btn-primary' name='save'><i class='fa fa-plus'></i> Add mission.</button>";
                     ?>
                   </div>
