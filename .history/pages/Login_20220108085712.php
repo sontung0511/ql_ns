@@ -61,8 +61,7 @@ else
           mysqli_query($conn, $update); 
 
 					$success['mess'] = 'Login success';
-					// header("Refresh: 1; index.php?p=index&a=statistic");
-					header("Refresh: 1; changepass.php?p=account&a=changepass");
+					header("Refresh: 1; index.php?p=index&a=statistic");
 				}
 				else
 				{
